@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Pinidu Dewmina</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+    <div class="bg-white shadow-lg rounded-lg p-6 w-96 text-center">
+        <h1 class="text-2xl font-bold text-gray-800 mb-2">Contact Me</h1>
+        <p class="text-gray-600">Get in touch with me via phone, email, or WhatsApp.</p>
+
+        <div class="mt-4">
+            <div class="flex items-center justify-center space-x-2">
+                <span class="text-gray-600">📞 Phone:</span>
+                <a href="tel:+94701878429" class="text-blue-500 hover:underline">0701878429</a>
+            </div>
+            
+            <div class="flex items-center justify-center space-x-2 mt-2">
+                <span class="text-gray-600">✉️ Email:</span>
+                <a href="mailto:contact.pinidudewmina@gmail.com" class="text-blue-500 hover:underline">
+                    contact.pinidudewmina@gmail.com
+                </a>
+            </div>
+
+            <div class="flex items-center justify-center space-x-2 mt-2">
+                <span class="text-gray-600">💬 WhatsApp:</span>
+                <a href="https://wa.me/94701878429" class="text-blue-500 hover:underline">Chat on WhatsApp</a>
+            </div>
+        </div>
+
+        <button onclick="showAlert()" class="mt-6 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+            Say Hi!
+        </button>
+    </div>
+
+    <script>
+        function showAlert() {
+            alert('Hello! Feel free to contact me anytime.');
+        }
+    </script>
+
+</body>
+</html>
