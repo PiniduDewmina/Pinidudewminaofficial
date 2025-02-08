@@ -3,42 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me - Pinidu Dewmina</title>
+    <title>Pinidu Digital Marketing</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+<body class="bg-gray-100">
 
-    <div class="bg-white shadow-lg rounded-lg p-6 w-96 text-center">
-        <h1 class="text-2xl font-bold text-gray-800 mb-2">Contact Me</h1>
-        <p class="text-gray-600">Get in touch with me via phone, email, or WhatsApp.</p>
+    <!-- Navigation -->
+    <nav class="bg-blue-600 p-4 text-white text-center text-xl font-semibold">
+        Pinidu Digital Marketing
+    </nav>
 
-        <div class="mt-4">
-            <div class="flex items-center justify-center space-x-2">
-                <span class="text-gray-600">📞 Phone:</span>
-                <a href="tel:+94701878429" class="text-blue-500 hover:underline">0701878429</a>
+    <!-- Hero Section -->
+    <header class="text-center py-16 bg-blue-500 text-white">
+        <h1 class="text-4xl font-bold">Boost Your Business with Digital Marketing</h1>
+        <p class="mt-2 text-lg">Grow your brand with expert marketing strategies.</p>
+        <a href="#contact" class="mt-4 inline-block bg-white text-blue-600 px-6 py-2 rounded shadow hover:bg-gray-200">Get Started</a>
+    </header>
+
+    <!-- Services Section -->
+    <section class="p-8 text-center">
+        <h2 class="text-3xl font-bold text-gray-800">Our Services</h2>
+        <p class="text-gray-600 mt-2">We offer top-notch digital marketing solutions.</p>
+
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="p-4 bg-white shadow rounded">
+                <h3 class="text-xl font-semibold text-blue-600">SEO Optimization</h3>
+                <p class="text-gray-600 mt-2">Rank higher on search engines.</p>
             </div>
-            
-            <div class="flex items-center justify-center space-x-2 mt-2">
-                <span class="text-gray-600">✉️ Email:</span>
-                <a href="mailto:contact.pinidudewmina@gmail.com" class="text-blue-500 hover:underline">
-                    contact.pinidudewmina@gmail.com
-                </a>
+            <div class="p-4 bg-white shadow rounded">
+                <h3 class="text-xl font-semibold text-blue-600">Social Media Marketing</h3>
+                <p class="text-gray-600 mt-2">Engage your audience online.</p>
             </div>
-
-            <div class="flex items-center justify-center space-x-2 mt-2">
-                <span class="text-gray-600">💬 WhatsApp:</span>
-                <a href="https://wa.me/94701878429" class="text-blue-500 hover:underline">Chat on WhatsApp</a>
+            <div class="p-4 bg-white shadow rounded">
+                <h3 class="text-xl font-semibold text-blue-600">Content Marketing</h3>
+                <p class="text-gray-600 mt-2">Create powerful content strategies.</p>
             </div>
         </div>
+    </section>
 
-        <button onclick="showAlert()" class="mt-6 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+    <!-- Contact Section -->
+    <section id="contact" class="p-8 bg-gray-200 text-center">
+        <h2 class="text-3xl font-bold text-gray-800">Contact Me</h2>
+        <p class="text-gray-600 mt-2">Let's work together on your project.</p>
+
+        <div class="mt-6">
+            <p class="text-gray-800">📞 Phone: <a href="tel:+94701878429" class="text-blue-600 hover:underline">0701878429</a></p>
+            <p class="text-gray-800">✉️ Email: <a href="mailto:contact.pinidudewmina@gmail.com" class="text-blue-600 hover:underline">contact.pinidudewmina@gmail.com</a></p>
+            <p class="text-gray-800">💬 WhatsApp: <a href="https://wa.me/94701878429" class="text-blue-600 hover:underline">Chat Now</a></p>
+        </div>
+
+        <button onclick="showMessage()" class="mt-4 bg-blue-600 text-white px-4 py-2 rounded shadow hover:bg-blue-700">
             Say Hi!
         </button>
-    </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white text-center p-4">
+        &copy; 2025 Pinidu Digital Marketing | All Rights Reserved
+    </footer>
 
     <script>
-        function showAlert() {
-            alert('Hello! Feel free to contact me anytime.');
+        function showMessage() {
+            alert('Hello! Let’s work together to grow your business.');
         }
     </script>
 
