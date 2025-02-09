@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to My Official Website</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body class="bg-cover bg-center h-screen text-white" style="background-image: url('https://source.unsplash.com/1920x1080/?technology,nature');">
 
     <!-- Header -->
     <header class="text-center p-6 bg-black bg-opacity-60">
-        <h1 class="text-4xl font-bold">Welcome to My Official Website</h1>
-        <p class="text-lg mt-2">Stay connected and updated!</p>
+        <h1 class="text-5xl font-bold bg-gradient-to-r from-pink-400 via-yellow-400 to-blue-500 text-transparent bg-clip-text">
+            Welcome Everyone
+        </h1>
+        <p class="text-lg mt-2 font-semibold">This is my personal website. Below, you can find contact options and other details.</p>
     </header>
 
     <!-- Contact Section -->
@@ -42,9 +45,13 @@
         <p id="news" class="text-lg mt-2">Loading...</p>
     </div>
 
-    <!-- Robot Check -->
+    <!-- Google reCAPTCHA -->
     <div class="max-w-2xl mx-auto mt-6 bg-black bg-opacity-60 p-6 rounded-lg shadow-lg text-center">
-        <p class="text-yellow-400">✅ Robot Check Passed!</p>
+        <form action="?" method="POST">
+            <div class="g-recaptcha" data-sitekey="6LcMwtEqAAAAAB8eUT7ZVQM9e04FeVTL5lirwzB-"></div>
+            <br>
+            <input type="submit" value="Submit" class="bg-blue-500 text-white px-4 py-2 rounded">
+        </form>
     </div>
 
     <!-- Weather & News API Scripts -->
@@ -63,9 +70,9 @@
         // Fetch Tech News
         async function fetchNews() {
             try {
-                let response = await fetch('https://newsapi.org/v2/top-headlines?category=technology&apiKey=3e7ed2e700df401db627f19e7e585d68');
+                let response = await fetch('https://api.thenewsapi.com/v1/news/top?api_token=y2uyQKAUFWyMTlfVqYHnkvNCId0HpgtuWHX7ojdj&categories=technology&language=en');
                 let data = await response.json();
-                document.getElementById('news').innerText = data.articles[0].title;
+                document.getElementById('news').innerText = data.data[0].title;
             } catch (error) {
                 document.getElementById('news').innerText = "Failed to load news.";
             }
