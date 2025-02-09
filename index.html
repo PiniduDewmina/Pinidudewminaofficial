@@ -8,7 +8,7 @@
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <style>
         body {
-            background: url('https://source.unsplash.com/1600x900/?technology,programming,network') no-repeat center center fixed;
+            background: url('https://source.unsplash.com/1600x900/?nature,technology') no-repeat center center fixed;
             background-size: cover;
         }
     </style>
@@ -53,10 +53,9 @@
     <!-- reCAPTCHA Form -->
     <section class="text-center mt-8 p-6 bg-black bg-opacity-70">
         <h2 class="text-2xl font-bold text-red-400">🔐 Robot Check</h2>
-        <form id="captchaForm" action="https://docs.google.com/forms/d/e/1FAIpQLSfA7BZkTZBck9uD2KZHTvZc8oqlXgXtSxQKp2P7j6vmt7G8PQ/formResponse" method="POST" target="_self">
+        <form action="?" method="POST">
             <div class="g-recaptcha" data-sitekey="6LcQxdEqAAAAAPdCALu2PFMgkHDT9rK3rxrujUXX"></div>
             <br>
-            <input type="text" name="entry.123456" value="Pinidu Dewmina" style="display:none"> <!-- Example hidden entry -->
             <input type="submit" value="Submit" class="bg-blue-500 text-white px-4 py-2 rounded">
         </form>
     </section>
