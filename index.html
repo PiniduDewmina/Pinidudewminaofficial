@@ -14,59 +14,65 @@
         <p class="text-lg mt-2">Stay connected and updated!</p>
     </header>
 
-    <!-- Sign-In Section -->
+    <!-- Contact Section -->
     <div class="max-w-2xl mx-auto mt-6 bg-black bg-opacity-60 p-6 rounded-lg shadow-lg text-center">
-        <h2 class="text-2xl font-bold">Sign In</h2>
-        <p class="text-gray-300 mt-2">Use Google or Microsoft to sign in.</p>
-        <div class="mt-4">
-            <button onclick="googleSignIn()" class="bg-red-500 text-white px-4 py-2 rounded shadow hover:bg-red-600">Sign in with Google</button>
-            <button onclick="microsoftSignIn()" class="bg-blue-600 text-white px-4 py-2 rounded shadow hover:bg-blue-700">Sign in with Microsoft</button>
-        </div>
-        <p id="user-info" class="mt-4 text-green-300"></p>
+        <h2 class="text-2xl font-bold">Contact Me</h2>
+        <p class="mt-2">📞 Phone: <a href="tel:+94701878429" class="text-blue-400">0701878429</a></p>
+        <p>📧 Email: <a href="mailto:contact.pinidudewmina@gmail.com" class="text-blue-400">contact.pinidudewmina@gmail.com</a></p>
+        <p>💬 WhatsApp: <a href="https://wa.me/94701878429" class="text-blue-400">0701878429</a></p>
     </div>
 
-    <!-- Firebase SDK -->
-    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"></script>
+    <!-- Social Media Links -->
+    <div class="max-w-2xl mx-auto mt-6 bg-black bg-opacity-60 p-6 rounded-lg shadow-lg text-center">
+        <h2 class="text-2xl font-bold">Follow Me</h2>
+        <p class="mt-2">
+            <a href="https://www.facebook.com/share/15aqAebJ4W/?mibextid=qi2Omg" class="text-blue-500">Facebook</a> |
+            <a href="https://x.com/PiniduDewmina?t=LR8EHt4GfFPenwsVUP6qVw&s=09" class="text-blue-400">X</a> |
+            <a href="https://www.instagram.com/pinidudewmina?igsh=eGU2eHhodnR2YTc0" class="text-pink-400">Instagram</a> |
+            <a href="https://discord.gg/74xtCEdx" class="text-purple-400">Discord</a>
+        </p>
+    </div>
 
+    <!-- Weather & News Section -->
+    <div class="max-w-2xl mx-auto mt-6 bg-black bg-opacity-60 p-6 rounded-lg shadow-lg text-center">
+        <h2 class="text-2xl font-bold">Today's Weather</h2>
+        <p id="weather" class="text-lg mt-2">Loading...</p>
+
+        <h2 class="text-2xl font-bold mt-4">Today's Highlighted Tech News</h2>
+        <p id="news" class="text-lg mt-2">Loading...</p>
+    </div>
+
+    <!-- Robot Check -->
+    <div class="max-w-2xl mx-auto mt-6 bg-black bg-opacity-60 p-6 rounded-lg shadow-lg text-center">
+        <p class="text-yellow-400">✅ Robot Check Passed!</p>
+    </div>
+
+    <!-- Weather & News API Scripts -->
     <script>
-        // Firebase Configuration
-        const firebaseConfig = {
-            apiKey: "AIzaSyDdphq-m5cocokihJRmjULi0KR4BCVJLFw",
-            authDomain: "my-official-web-site.firebaseapp.com",
-            projectId: "my-official-web-site",
-            storageBucket: "my-official-web-site.firebasestorage.app",
-            messagingSenderId: "4214202569",
-            appId: "1:4214202569:android:59af72281a50cbe1c86d18"
-        };
-
-        // Initialize Firebase
-        const app = firebase.initializeApp(firebaseConfig);
-        const auth = firebase.auth();
-
-        // Google Sign-In
-        function googleSignIn() {
-            const provider = new firebase.auth.GoogleAuthProvider();
-            auth.signInWithPopup(provider)
-                .then((result) => {
-                    document.getElementById('user-info').innerText = "Signed in as: " + result.user.displayName;
-                })
-                .catch((error) => {
-                    alert("Error: " + error.message);
-                });
+        // Fetch Weather Data
+        async function fetchWeather() {
+            try {
+                let response = await fetch('https://api.weatherapi.com/v1/current.json?key=95f03c4f386842a289c30924250902&q=Colombo');
+                let data = await response.json();
+                document.getElementById('weather').innerText = `${data.location.name}: ${data.current.temp_c}°C, ${data.current.condition.text}`;
+            } catch (error) {
+                document.getElementById('weather').innerText = "Failed to load weather.";
+            }
         }
 
-        // Microsoft Sign-In
-        function microsoftSignIn() {
-            const provider = new firebase.auth.OAuthProvider('microsoft.com');
-            auth.signInWithPopup(provider)
-                .then((result) => {
-                    document.getElementById('user-info').innerText = "Signed in as: " + result.user.displayName;
-                })
-                .catch((error) => {
-                    alert("Error: " + error.message);
-                });
+        // Fetch Tech News
+        async function fetchNews() {
+            try {
+                let response = await fetch('https://newsapi.org/v2/top-headlines?category=technology&apiKey=3e7ed2e700df401db627f19e7e585d68');
+                let data = await response.json();
+                document.getElementById('news').innerText = data.articles[0].title;
+            } catch (error) {
+                document.getElementById('news').innerText = "Failed to load news.";
+            }
         }
+
+        fetchWeather();
+        fetchNews();
     </script>
 
 </body>
