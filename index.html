@@ -53,7 +53,7 @@
     <!-- reCAPTCHA Form -->
     <section class="text-center mt-8 p-6 bg-black bg-opacity-70">
         <h2 class="text-2xl font-bold text-red-400">🔐 Robot Check</h2>
-        <form action="?" method="POST">
+        <form id="captchaForm" action="?" method="POST" onsubmit="return validateCaptcha()">
             <div class="g-recaptcha" data-sitekey="6LcQxdEqAAAAAPdCALu2PFMgkHDT9rK3rxrujUXX"></div>
             <br>
             <input type="submit" value="Submit" class="bg-blue-500 text-white px-4 py-2 rounded">
@@ -83,6 +83,16 @@
                 document.getElementById('news').innerHTML = newsHTML;
             })
             .catch(error => console.log("Error loading news:", error));
+
+        // Validate reCAPTCHA before submitting form
+        function validateCaptcha() {
+            var response = grecaptcha.getResponse();
+            if (response.length == 0) {
+                alert("Please verify that you are not a robot.");
+                return false;
+            }
+            return true;  // Allow form submission
+        }
     </script>
 
 </body>
