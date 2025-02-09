@@ -3,83 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to My Official Website</title>
+    <title>Pinidu Dewmina - Official Website</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <style>
+        body {
+            background: url('https://source.unsplash.com/1600x900/?nature,technology') no-repeat center center fixed;
+            background-size: cover;
+        }
+    </style>
 </head>
-<body class="bg-cover bg-center h-screen text-white" style="background-image: url('https://source.unsplash.com/1920x1080/?technology,nature');">
+<body class="text-white">
 
     <!-- Header -->
-    <header class="text-center p-6 bg-black bg-opacity-60">
-        <h1 class="text-5xl font-bold bg-gradient-to-r from-pink-400 via-yellow-400 to-blue-500 text-transparent bg-clip-text">
-            Welcome Everyone
-        </h1>
-        <p class="text-lg mt-2 font-semibold">This is my personal website. Below, you can find contact options and other details.</p>
+    <header class="text-center p-6 bg-black bg-opacity-70">
+        <h1 class="text-4xl font-bold text-yellow-400">Welcome Everyone</h1>
+        <p class="text-lg mt-2">This is my personal website. Below you can find contact options and other details.</p>
     </header>
 
-    <!-- Contact Section -->
-    <div class="max-w-2xl mx-auto mt-6 bg-black bg-opacity-60 p-6 rounded-lg shadow-lg text-center">
-        <h2 class="text-2xl font-bold">Contact Me</h2>
-        <p class="mt-2">📞 Phone: <a href="tel:+94701878429" class="text-blue-400">0701878429</a></p>
-        <p>📧 Email: <a href="mailto:contact.pinidudewmina@gmail.com" class="text-blue-400">contact.pinidudewmina@gmail.com</a></p>
-        <p>💬 WhatsApp: <a href="https://wa.me/94701878429" class="text-blue-400">0701878429</a></p>
-    </div>
+    <!-- Contact Info -->
+    <section class="text-center mt-8 p-6 bg-black bg-opacity-70">
+        <h2 class="text-2xl font-bold text-blue-400">📞 Contact Me</h2>
+        <p><strong>Phone:</strong> <a href="tel:0701878429" class="text-yellow-300">0701878429</a></p>
+        <p><strong>Email:</strong> <a href="mailto:contact.pinidudewmina@gmail.com" class="text-yellow-300">contact.pinidudewmina@gmail.com</a></p>
+        <p><strong>WhatsApp:</strong> <a href="https://wa.me/0701878429" class="text-green-300">0701878429</a></p>
 
-    <!-- Social Media Links -->
-    <div class="max-w-2xl mx-auto mt-6 bg-black bg-opacity-60 p-6 rounded-lg shadow-lg text-center">
-        <h2 class="text-2xl font-bold">Follow Me</h2>
-        <p class="mt-2">
+        <!-- Social Links -->
+        <h3 class="text-xl mt-4 font-semibold text-blue-400">🌐 Social Media</h3>
+        <p>
             <a href="https://www.facebook.com/share/15aqAebJ4W/?mibextid=qi2Omg" class="text-blue-500">Facebook</a> |
-            <a href="https://x.com/PiniduDewmina?t=LR8EHt4GfFPenwsVUP6qVw&s=09" class="text-blue-400">X</a> |
-            <a href="https://www.instagram.com/pinidudewmina?igsh=eGU2eHhodnR2YTc0" class="text-pink-400">Instagram</a> |
-            <a href="https://discord.gg/74xtCEdx" class="text-purple-400">Discord</a>
+            <a href="https://x.com/PiniduDewmina?t=LR8EHt4GfFPenwsVUP6qVw&s=09" class="text-gray-300">X</a> |
+            <a href="https://discord.gg/74xtCEdx" class="text-purple-400">Discord</a> |
+            <a href="https://www.instagram.com/pinidudewmina?igsh=eGU2eHhodnR2YTc0" class="text-pink-400">Instagram</a>
         </p>
-    </div>
+    </section>
 
-    <!-- Weather & News Section -->
-    <div class="max-w-2xl mx-auto mt-6 bg-black bg-opacity-60 p-6 rounded-lg shadow-lg text-center">
-        <h2 class="text-2xl font-bold">Today's Weather</h2>
-        <p id="weather" class="text-lg mt-2">Loading...</p>
+    <!-- Weather Info -->
+    <section class="text-center mt-8 p-6 bg-black bg-opacity-70">
+        <h2 class="text-2xl font-bold text-blue-400">🌤️ Today's Weather</h2>
+        <p id="weather" class="text-lg text-yellow-300">Loading...</p>
+    </section>
 
-        <h2 class="text-2xl font-bold mt-4">Today's Highlighted Tech News</h2>
-        <p id="news" class="text-lg mt-2">Loading...</p>
-    </div>
+    <!-- Technical News -->
+    <section class="text-center mt-8 p-6 bg-black bg-opacity-70">
+        <h2 class="text-2xl font-bold text-blue-400">📰 Today's Technical News</h2>
+        <ul id="news" class="text-yellow-300 list-disc list-inside">Loading...</ul>
+    </section>
 
-    <!-- Google reCAPTCHA -->
-    <div class="max-w-2xl mx-auto mt-6 bg-black bg-opacity-60 p-6 rounded-lg shadow-lg text-center">
+    <!-- reCAPTCHA Form -->
+    <section class="text-center mt-8 p-6 bg-black bg-opacity-70">
+        <h2 class="text-2xl font-bold text-red-400">🔐 Robot Check</h2>
         <form action="?" method="POST">
-            <div class="g-recaptcha" data-sitekey="6LcMwtEqAAAAAB8eUT7ZVQM9e04FeVTL5lirwzB-"></div>
+            <div class="g-recaptcha" data-sitekey="6LcQxdEqAAAAAPdCALu2PFMgkHDT9rK3rxrujUXX"></div>
             <br>
             <input type="submit" value="Submit" class="bg-blue-500 text-white px-4 py-2 rounded">
         </form>
-    </div>
+    </section>
 
-    <!-- Weather & News API Scripts -->
+    <!-- JavaScript for Weather & News -->
     <script>
         // Fetch Weather Data
-        async function fetchWeather() {
-            try {
-                let response = await fetch('https://api.weatherapi.com/v1/current.json?key=95f03c4f386842a289c30924250902&q=Colombo');
-                let data = await response.json();
+        const weatherAPI = "https://api.weatherapi.com/v1/current.json?key=95f03c4f386842a289c30924250902&q=Colombo&aqi=no";
+        fetch(weatherAPI)
+            .then(response => response.json())
+            .then(data => {
                 document.getElementById('weather').innerText = `${data.location.name}: ${data.current.temp_c}°C, ${data.current.condition.text}`;
-            } catch (error) {
-                document.getElementById('weather').innerText = "Failed to load weather.";
-            }
-        }
+            })
+            .catch(error => console.log("Error loading weather:", error));
 
-        // Fetch Tech News
-        async function fetchNews() {
-            try {
-                let response = await fetch('https://api.thenewsapi.com/v1/news/top?api_token=y2uyQKAUFWyMTlfVqYHnkvNCId0HpgtuWHX7ojdj&categories=technology&language=en');
-                let data = await response.json();
-                document.getElementById('news').innerText = data.data[0].title;
-            } catch (error) {
-                document.getElementById('news').innerText = "Failed to load news.";
-            }
-        }
-
-        fetchWeather();
-        fetchNews();
+        // Fetch Technical News
+        const newsAPI = "https://newsapi.org/v2/top-headlines?category=technology&country=us&apiKey=y2uyQKAUFWyMTlfVqYHnkvNCId0HpgtuWHX7ojdj";
+        fetch(newsAPI)
+            .then(response => response.json())
+            .then(data => {
+                let newsHTML = "";
+                data.articles.slice(0, 5).forEach(article => {
+                    newsHTML += `<li><a href="${article.url}" target="_blank" class="text-yellow-300">${article.title}</a></li>`;
+                });
+                document.getElementById('news').innerHTML = newsHTML;
+            })
+            .catch(error => console.log("Error loading news:", error));
     </script>
 
 </body>
