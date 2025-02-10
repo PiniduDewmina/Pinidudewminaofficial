@@ -1,99 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pinidu Dewmina - Official Website</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <style>
-        body {
-            background: url('https://source.unsplash.com/1600x900/?nature,technology') no-repeat center center fixed;
-            background-size: cover;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to My Official Website</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-image: url('https://source.unsplash.com/1600x900/?nature,water');
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
 </head>
-<body class="text-white">
-
+<body class="text-white font-sans">
+  <!-- Main Container -->
+  <div class="min-h-screen flex flex-col justify-center items-center bg-black bg-opacity-50 p-6">
     <!-- Header -->
-    <header class="text-center p-6 bg-black bg-opacity-70">
-        <h1 class="text-4xl font-bold text-yellow-400">Welcome Everyone</h1>
-        <p class="text-lg mt-2">This is my personal website. Below you can find contact options and other details.</p>
-    </header>
+    <h1 class="text-5xl font-bold mb-4">Welcome to My Official Website</h1>
+    <p class="text-xl mb-8">Feel free to reach out to me!</p>
 
-    <!-- Contact Info -->
-    <section class="text-center mt-8 p-6 bg-black bg-opacity-70">
-        <h2 class="text-2xl font-bold text-blue-400">📞 Contact Me</h2>
-        <p><strong>Phone:</strong> <a href="tel:0701878429" class="text-yellow-300">0701878429</a></p>
-        <p><strong>Email:</strong> <a href="mailto:contact.pinidudewmina@gmail.com" class="text-yellow-300">contact.pinidudewmina@gmail.com</a></p>
-        <p><strong>WhatsApp:</strong> <a href="https://wa.me/0701878429" class="text-green-300">0701878429</a></p>
+    <!-- Contact Information -->
+    <div class="bg-white bg-opacity-10 rounded-lg p-6 mb-8">
+      <h2 class="text-2xl font-semibold mb-4">Contact Information</h2>
+      <p class="mb-2">📞 Phone: <a href="tel:0701878429" class="underline">0701878429</a></p>
+      <p class="mb-2">📧 Email: <a href="mailto:contact.pinidudewmina@gmail.com" class="underline">contact.pinidudewmina@gmail.com</a></p>
+      <p class="mb-2">💬 WhatsApp: <a href="https://wa.me/0701878429" class="underline">0701878429</a></p>
+    </div>
 
-        <!-- Social Links -->
-        <h3 class="text-xl mt-4 font-semibold text-blue-400">🌐 Social Media</h3>
-        <p>
-            <a href="https://www.facebook.com/share/15aqAebJ4W/?mibextid=qi2Omg" class="text-blue-500">Facebook</a> |
-            <a href="https://x.com/PiniduDewmina?t=LR8EHt4GfFPenwsVUP6qVw&s=09" class="text-gray-300">X</a> |
-            <a href="https://discord.gg/74xtCEdx" class="text-purple-400">Discord</a> |
-            <a href="https://www.instagram.com/pinidudewmina?igsh=eGU2eHhodnR2YTc0" class="text-pink-400">Instagram</a>
-        </p>
-    </section>
+    <!-- Social Media Links -->
+    <div class="bg-white bg-opacity-10 rounded-lg p-6 mb-8">
+      <h2 class="text-2xl font-semibold mb-4">Follow Me</h2>
+      <div class="flex space-x-4">
+        <a href="https://www.facebook.com/share/15aqAebJ4W/?mibextid=qi2Omg" target="_blank" class="hover:opacity-75">
+          <img src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="Facebook">
+        </a>
+        <a href="https://x.com/PiniduDewmina?t=LR8EHt4GfFPenwsVUP6qVw&s=09" target="_blank" class="hover:opacity-75">
+          <img src="https://img.icons8.com/color/48/000000/twitterx--v1.png" alt="X (Twitter)">
+        </a>
+        <a href="https://discord.gg/74xtCEdx" target="_blank" class="hover:opacity-75">
+          <img src="https://img.icons8.com/color/48/000000/discord-logo.png" alt="Discord">
+        </a>
+        <a href="https://www.instagram.com/pinidudewmina?igsh=eGU2eHhodnR2YTc0" target="_blank" class="hover:opacity-75">
+          <img src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="Instagram">
+        </a>
+      </div>
+    </div>
 
-    <!-- Weather Info -->
-    <section class="text-center mt-8 p-6 bg-black bg-opacity-70">
-        <h2 class="text-2xl font-bold text-blue-400">🌤️ Today's Weather</h2>
-        <p id="weather" class="text-lg text-yellow-300">Loading...</p>
-    </section>
+    <!-- Weather and News Section -->
+    <div class="bg-white bg-opacity-10 rounded-lg p-6">
+      <h2 class="text-2xl font-semibold mb-4">Today's Highlights</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Weather -->
+        <div>
+          <h3 class="text-xl font-semibold mb-2">🌤️ Today's Weather</h3>
+          <p id="weather" class="text-lg">Loading weather...</p>
+        </div>
+        <!-- Technical News -->
+        <div>
+          <h3 class="text-xl font-semibold mb-2">📰 Technical News</h3>
+          <p id="news" class="text-lg">Loading news...</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <!-- Technical News -->
-    <section class="text-center mt-8 p-6 bg-black bg-opacity-70">
-        <h2 class="text-2xl font-bold text-blue-400">📰 Today's Technical News</h2>
-        <ul id="news" class="text-yellow-300 list-disc list-inside">Loading...</ul>
-    </section>
+  <!-- JavaScript for Weather and News -->
+  <script>
+    // Fetch Weather Data
+    fetch('https://api.openweathermap.org/data/2.5/weather?q=Colombo&appid=YOUR_API_KEY&units=metric')
+      .then(response => response.json())
+      .then(data => {
+        const weather = `${data.weather[0].description}, ${data.main.temp}°C`;
+        document.getElementById('weather').textContent = weather;
+      })
+      .catch(() => {
+        document.getElementById('weather').textContent = 'Weather data unavailable.';
+      });
 
-    <!-- reCAPTCHA Form -->
-    <section class="text-center mt-8 p-6 bg-black bg-opacity-70">
-        <h2 class="text-2xl font-bold text-red-400">🔐 Robot Check</h2>
-        <form id="captchaForm" action="?" method="POST" onsubmit="return validateCaptcha()">
-            <div class="g-recaptcha" data-sitekey="6LcQxdEqAAAAAPdCALu2PFMgkHDT9rK3rxrujUXX"></div>
-            <br>
-            <input type="submit" value="Submit" class="bg-blue-500 text-white px-4 py-2 rounded">
-        </form>
-    </section>
-
-    <!-- JavaScript for Weather & News -->
-    <script>
-        // Fetch Weather Data
-        const weatherAPI = "https://api.weatherapi.com/v1/current.json?key=95f03c4f386842a289c30924250902&q=Colombo&aqi=no";
-        fetch(weatherAPI)
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById('weather').innerText = `${data.location.name}: ${data.current.temp_c}°C, ${data.current.condition.text}`;
-            })
-            .catch(error => console.log("Error loading weather:", error));
-
-        // Fetch Technical News
-        const newsAPI = "https://newsapi.org/v2/top-headlines?category=technology&country=us&apiKey=y2uyQKAUFWyMTlfVqYHnkvNCId0HpgtuWHX7ojdj";
-        fetch(newsAPI)
-            .then(response => response.json())
-            .then(data => {
-                let newsHTML = "";
-                data.articles.slice(0, 5).forEach(article => {
-                    newsHTML += `<li><a href="${article.url}" target="_blank" class="text-yellow-300">${article.title}</a></li>`;
-                });
-                document.getElementById('news').innerHTML = newsHTML;
-            })
-            .catch(error => console.log("Error loading news:", error));
-
-        // Validate reCAPTCHA before submitting form
-        function validateCaptcha() {
-            var response = grecaptcha.getResponse();
-            if (response.length == 0) {
-                alert("Please verify that you are not a robot.");
-                return false;
-            }
-            return true;  // Allow form submission
-        }
-    </script>
-
+    // Fetch Technical News
+    fetch('https://newsapi.org/v2/top-headlines?category=technology&apiKey=YOUR_API_KEY')
+      .then(response => response.json())
+      .then(data => {
+        const news = data.articles[0]?.title || 'No news available.';
+        document.getElementById('news').textContent = news;
+      })
+      .catch(() => {
+        document.getElementById('news').textContent = 'News data unavailable.';
+      });
+  </script>
 </body>
 </html>
